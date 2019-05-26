@@ -12,7 +12,7 @@ app.get("*", (req, res) => {
 
 const server = http.createServer(app);
 
-server.listen(8080, () => {
+server.listen(process.env.PORT || 3000, () => {
 	const srv = server.address();
 	console.log("Listening on: " + srv.address + ":" + srv.port);
 });
